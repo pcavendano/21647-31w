@@ -49,7 +49,7 @@ function underscore_setup()
 	 */
 	function underscore_scripts()
 	{
-		wp_enqueue_style('underscore-style', get_stylesheet_uri(), array(), _S_VERSION);
+//		wp_enqueue_style('underscore-style', get_stylesheet_uri(), array(), _S_VERSION);
 
 		wp_enqueue_style( 'main_styles'
 			, get_template_directory_uri() . '/style.css',

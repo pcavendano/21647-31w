@@ -54,8 +54,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 
 // Importation normalize et box-sizing
-@import "generic/box-sizing";
 @import "generic/normalize";
+@import "generic/box-sizing";
+
 
 
 //Importation les éléments de base
