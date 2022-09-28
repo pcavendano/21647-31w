@@ -1,3 +1,10 @@
 body {
-  background: $couleur__background-body; // Fallback for when there is no custom background color defined.
+  background-color: $couleur__background--body;
+}
+main {
+  font-family: $police__main;
+}
+
+.trace {
+  background-color: #0f0;
 }

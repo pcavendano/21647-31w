@@ -45,7 +45,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Accessibility
 	- Alignments
 /*--------------------------------------------------------------*/
-/* On change les couleurs*/ /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/*
+$couleur__background--body: rgb(171, 236, 147);
+$couleur__background--h1: rgba(81, 108, 190, 0.971);
+$couleur__background--h2h3h4: rgb(16, 12, 114);
+$couleur__background--code: #bbb;
+*/
+/* ----------------------------------- Couleur d'arrière plan titres */
+/* --------------------------------------- couleur   color :  */
+/* --------------------- Couleurs des liens */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
 	 ========================================================================== */
 /**
@@ -367,7 +376,34 @@ html {
 }
 
 body {
-  background: rgb(221, 96, 197);
+  background-color: rgb(171, 236, 147);
+}
+
+main {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.trace {
+  background-color: #0f0;
+}
+
+small,
+pre,
+code {
+  background-color: rgb(213, 208, 230);
+  margin: 10px;
+}
+
+pre {
+  font-family: "Courier New", Courier, monospace;
+}
+
+code {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+span {
+  margin: 0 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
