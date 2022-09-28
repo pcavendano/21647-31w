@@ -61,4 +61,12 @@ function underscore_scripts()
 }
 add_action( 'wp_enqueue_scripts', 'underscore_scripts');
 
+/* ----------------------------------------- Initialisation de la fonction de menu */
 
+function mon_31w_register_nav_menu(){
+	register_nav_menus( array(
+		'menu_primaire' => __( 'Menu Primaire', 'text_domain' ),
+
+	) );
+}
+add_action( 'after_setup_theme', 'mon_31w_register_nav_menu', 0 );
