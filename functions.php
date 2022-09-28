@@ -53,7 +53,7 @@ function underscore_scripts()
 {
 //		wp_enqueue_style('underscore-style', get_stylesheet_uri(), array(), _S_VERSION);
 
-	wp_enqueue_style( 'underscore_styles',
+	wp_enqueue_style( 'styles',
 		get_template_directory_uri() . '/style.css',
 		array(),
 		filemtime(get_template_directory() . '/style.css'), false );
