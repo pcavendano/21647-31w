@@ -43,9 +43,8 @@ Importation des variables.
 
 // Les composants
 @import "composants/_nav_principal";
-
+@import "composants/_nav_aside";
+@import "composants/_entete";
 
 // Layout
 @import "layouts/_sidebar-content";
-@import "layouts/_content-sidebar";
-@import "layouts/_no-sidebar";

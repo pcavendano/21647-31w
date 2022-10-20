@@ -437,6 +437,23 @@ a:hover, a:active {
   outline: 0;
 }
 
+/* ------------------------------------------------  .menu__aside  */
+.menu__aside a {
+  color: rgb(14, 27, 45);
+}
+.menu__aside a:visited {
+  color: rgb(12, 63, 76);
+}
+.menu__aside a:hover, .menu__aside a:focus, .menu__aside a:active {
+  color: rgb(76, 122, 165);
+}
+.menu__aside a:focus {
+  outline: thin dotted;
+}
+.menu__aside a:hover, .menu__aside a:active {
+  outline: 0;
+}
+
 button,
 input[type=button],
 input[type=reset],
@@ -591,6 +608,20 @@ figure {
 }
 
 /* transformation en CSS */
+.menu__aside {
+  display: flex;
+}
+.menu__aside .menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/*
+.menu_aside{}
+.menu_aside .menu {}
+.menu_aside .menu-item {}
+.menu__aside a {}
+*/
 .site__header {
   grid-area: header;
 }
@@ -618,41 +649,6 @@ figure {
     grid-template-columns: 25% auto;
     grid-template-areas: "header header" "sidebar main" "footer footer";
   }
-}
-
-.site {
-  display: grid;
-  grid-template-columns: auto 25%;
-  grid-template-areas: "header header" "main sidebar" "footer footer";
-}
-
-.site-header {
-  grid-area: header;
-}
-
-.site-main {
-  grid-area: main;
-  overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
-}
-
-.widget-area {
-  grid-area: sidebar;
-}
-
-.site-footer {
-  grid-area: footer;
-}
-
-.no-sidebar .site {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-areas: "header" "main" "footer";
-}
-
-.no-sidebar .site {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-areas: "header" "main" "footer";
 }
 
 /*# sourceMappingURL=style.css.map */
