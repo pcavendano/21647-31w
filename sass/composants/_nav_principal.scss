@@ -1,0 +1,39 @@
+// nav
+.menu__principal {
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+//ul
+  .menu {
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin: 0;
+  }
+//li
+  .menu-item {
+  }
+a {
+    display: block;
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+}
+a:hover {
+    background-color: #555;
+}
+} // fin .menu__principal
+
+         /* transformation en CSS */
+     .menu-primaire-container {
+     }
+.menu-primaire-container .menu {
+}
+.menu-primaire-container .menu-item {
+}
+.menu-primaire-container a {
+}
