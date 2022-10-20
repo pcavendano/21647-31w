@@ -24,6 +24,9 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<header id="masthead" class="site-header">
+		<?php wp_nav_menu(array(
+			"menu" => "principal",
+			"container" => "nav")); ?>
 		<div class="site-branding">
 
 				<h1 class="site-title">
@@ -37,7 +40,5 @@
             <p class="site-description"><?php echo $wp1_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
         </div><!-- .site-branding -->
-		<?php wp_nav_menu(array(
-			"menu" => "primaire",
-			"container" => "nav")); ?>
+
 	</header><!-- #masthead -->
