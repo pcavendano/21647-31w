@@ -1,22 +1,48 @@
 a {
-    color: $couleur__link;
+  color: $couleur__link;
 
-&:visited {
-     color: $couleur__link--visited;
- }
+  &:visited {
+    color: $couleur__link--visited;
+  }
 
-&:hover,
-&:focus,
-&:active {
-     color: $couleur__link--hover;
- }
+  &:hover,
+  &:focus,
+  &:active {
+    color: $couleur__link--hover;
+  }
 
-&:focus {
-     outline: thin dotted;
- }
+  &:focus {
+    outline: thin dotted;
+  }
 
-&:hover,
-&:active {
-     outline: 0;
- }
+  &:hover,
+  &:active {
+    outline: 0;
+  }
+}
+/* ------------------------------------------------  .menu__aside  */
+.menu__aside a {
+  color: $couleur__link__aside;
+
+  &:visited {
+    color: $couleur__link__aside--visited;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $couleur__link__aside--hover;
+  }
+
+  &:focus {
+    outline: thin dotted;
+  }
+
+  &:hover,
+  &:active {
+    outline: 0;
+  }
+}
+
+.site__title a {
 }
