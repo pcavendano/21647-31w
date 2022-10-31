@@ -622,6 +622,16 @@ figure {
 .menu_aside .menu-item {}
 .menu__aside a {}
 */
+.site__footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.site__footer div {
+  flex: 1;
+  border: 1px solid #ee2626;
+}
+
 .site__header {
   grid-area: header;
 }
