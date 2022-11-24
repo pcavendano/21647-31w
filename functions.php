@@ -1,5 +1,4 @@
 <?php
-
 /**
  * underscore functions and definitions
  *
@@ -8,13 +7,13 @@
  * @package underscore
  */
 
-if (!defined('_S_VERSION')) {
+if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define('_S_VERSION', '1.0.0');
+	define( '_S_VERSION', '1.0.0' );
 }
 
-function underscore_setup()
-{
+//////////////////////////////////////////////////
+function underscore_setup() {
 
 	/*
 	* Let WordPress manage the document title.
@@ -22,13 +21,13 @@ function underscore_setup()
 	* hard-coded <title> tag in the document head, and expect WordPress to
 	* provide it for us.
 	*/
-	add_theme_support('title-tag');
+	add_theme_support( 'title-tag' );
 
 
 	/*
-	* Switch default core markup for search form, comment form, and comments
-	* to output valid HTML5.
-	*/
+		* Switch default core markup for search form, comment form, and comments
+		* to output valid HTML5.
+		*/
 	add_theme_support(
 		'html5',
 		array(
@@ -42,22 +41,28 @@ function underscore_setup()
 		)
 	);
 }
-add_action('after_setup_theme', 'underscore_setup');
+add_action( 'after_setup_theme', 'underscore_setup' );
+
 
 /**
  * Enqueue scripts and styles.
  */
-function underscore_scripts()
-{
-//		wp_enqueue_style('underscore-style', get_stylesheet_uri(), array(), _S_VERSION);
+function underscore_scripts() {
+	/*
+	wp_enqueue_style( 'underscore-style',
+					   get_stylesheet_uri(), 
+					   array(),
+					_S_VERSION );
+	*/
 
-	wp_enqueue_style( 'styles',
+	wp_enqueue_style('underscore-style',
 		get_template_directory_uri() . '/style.css',
 		array(),
-		filemtime(get_template_directory() . '/style.css'), false );
+		filemtime(get_template_directory() . '/style.css'), false);
 
 }
-add_action( 'wp_enqueue_scripts', 'underscore_scripts');
+add_action( 'wp_enqueue_scripts', 'underscore_scripts' );
+
 
 /* ----------------------------------------- Initialisation de la fonction de menu */
 
@@ -69,36 +74,37 @@ function mon_31w_register_nav_menu(){
 }
 add_action( 'after_setup_theme', 'mon_31w_register_nav_menu', 0 );
 
-/*--------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------*/
-/*---Initialisation de sidebar----------------------------------------------*/
-/*--------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------*/
+
+/**
+ * filtre le menu «aside»
+ * @arg  $obj_menu, $arg
+ */
 
 
-/* --------------------------------------------- pour filtre chacun des élément du menu */
-function igc31w_filtre_choix_menu($obj_menu){
-	//var_dump($obj_menu);
-	//die();
+function igc31w_filtre_choix_menu($obj_menu, $arg){
+	//echo "/////////////////  obj_menu";
+	// var_dump($obj_menu);
+	//  echo "/////////////////  arg";
+	//  var_dump($arg);
 
-	foreach($obj_menu as $cle => $value)
-	{
-		//print_r($value);
-
-		$value->title = substr($value->title,7);
-		$value->title = substr($value->title,0,strpos($value->title,'('));
-		$value->title = wp_trim_words($value->title,3,"...");
-		// echo $value->title . '<br>';
-
+	if ($arg->menu == "aside"){
+		foreach($obj_menu as $cle => $value)
+		{
+			//  print_r($value);
+			/* retirer le sigle numérique du cours */
+			$value->title = substr($value->title,7);
+			/* retirer la durée du cours ex: (75h) */
+			$value->title = substr($value->title,0,strpos($value->title, '('));
+			$value->title = wp_trim_words($value->title,3," ... ");
+			//echo $value->title . '<br>';
+		}
 	}
-
 	//die();
 	return $obj_menu;
-
 }
-add_filter("wp_nav_menu_objects","igc31w_filtre_choix_menu");
+
+add_filter("wp_nav_menu_objects","igc31w_filtre_choix_menu", 10,2);
+
 
 
 /* -------------------------------------------------------- Initialisation des sidebar */

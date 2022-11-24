@@ -7,7 +7,10 @@
   overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
 }
 
-.widget__area {
+.site__menu {
+  grid-area: menu;
+}
+.site__sidebar {
   grid-area: sidebar;
 }
 
@@ -19,7 +22,7 @@
   display: grid;
   grid-template-columns: auto;
   grid-template-areas:
-    "sidebar"
+    "menu"
     "header"
     "main"
     "footer";
@@ -28,7 +31,9 @@
     grid-template-columns: ($size__site-sidebar) auto;
     grid-template-areas:
       "header header"
+      "menu main"
       "sidebar main"
+      ". main"
       "footer footer";
   }
 }
