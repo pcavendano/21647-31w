@@ -425,10 +425,10 @@ a {
   color: #55f;
 }
 a:visited {
-  color: #3f3;
+  color: #33adff;
 }
 a:hover, a:focus, a:active {
-  color: #8f8;
+  color: #212d4f;
 }
 a:focus {
   outline: thin dotted;
@@ -622,6 +622,16 @@ figure {
 .menu_aside .menu-item {}
 .menu__aside a {}
 */
+.site__footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.site__footer div {
+  flex: 1;
+  border: 1px solid #ee2626;
+}
+
 .site__header {
   grid-area: header;
 }

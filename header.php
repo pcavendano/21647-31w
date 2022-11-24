@@ -31,10 +31,6 @@
             "container_class"=> "menu__principal")); ?>
 		<div class="site__branding">
 
-				<h1 class="site__title">
-                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo('name');?></a>
-                </h1>
-
             <?php
 			$wp1_description = get_bloginfo( 'description', 'display' );
 			if ( $wp1_description || is_customize_preview() ) :
@@ -43,12 +39,18 @@
 			<?php endif; ?>
         </div><!-- .site-branding -->
 
-	</header><!-- #masthead -->
-    <aside class="widget__area">
-        <h2>Menu Secondaire</h2>
-        <?php wp_nav_menu(array(
-                "menu"=>"aside",
-                "container" =>"nav",
-                "container_class"=>"menu__aside"
-        ));?>
+    </header><!-- #masthead -->
+    <aside class="site__menu">
+        <input type="checkbox" name="chk-burger" id="chk-burger" class="chk-burger">
+        <label class="burger" for="chk-burger">&#11135;</label>
+		<?php wp_nav_menu(array(
+			"menu" => "aside",
+			"container" => "nav",
+			"container_class" => "menu__aside"
+		));
+		?>
+    </aside>
+    <aside class="site__sidebar">
+        <div><?php get_sidebar( 'aside-1' ); ?></div>
+        <div><?php get_sidebar( 'aside-2' ); ?></div>
     </aside>
