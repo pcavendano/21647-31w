@@ -212,6 +212,8 @@ function my_register_sidebars() {
 			'after_title'   => '</h3>',
 		)
 	);
+
+
 	/* Repeat register_sidebar() code for additional sidebars. */
 }
 
