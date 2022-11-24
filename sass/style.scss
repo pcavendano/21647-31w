@@ -43,8 +43,10 @@ Importation des variables.
 
 // Les composants
 @import "composants/_nav_principal";
-@import "composants/_nav_aside";
+@import "composants/nav_aside";
+@import "composants/_nav_evenement";
 @import "composants/_entete";
 @import "composants/_footer";
+@import "composants/liste_cours";
 // Layout
 @import "layouts/_sidebar-content";
