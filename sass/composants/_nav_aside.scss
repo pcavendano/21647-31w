@@ -35,6 +35,8 @@
   @media screen and (min-width: 700px) {
     position: static;
     transform: translateX(0);
+    /* important de revenir à width 100%  pour remplacer le 100vw*/
+    width: 100%;
   }
 
   .menu {
