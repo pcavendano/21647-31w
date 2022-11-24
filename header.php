@@ -30,7 +30,7 @@
 			"container" => "nav",
             "container_class"=> "menu__principal")); ?>
 		<div class="site__branding">
-
+			<?= get_custom_logo(); ?>
             <?php
 			$wp1_description = get_bloginfo( 'description', 'display' );
 			if ( $wp1_description || is_customize_preview() ) :
