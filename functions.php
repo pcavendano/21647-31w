@@ -69,8 +69,13 @@ function mon_31w_register_nav_menu(){
 }
 add_action( 'after_setup_theme', 'mon_31w_register_nav_menu', 0 );
 
-
+/*--------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------*/
 /*---Initialisation de sidebar----------------------------------------------*/
+/*--------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------*/
 
 
 add_action('widgets_init', 'my_register_sidebars');
@@ -94,7 +99,7 @@ function my_register_sidebars()
 		array(
 			'id' => 'footer-2',
 			'name' => __('Sidebar - footer - 2'),
-			'description' => __('Deuxième sidebar du footer.'),
+			'description' => __('DeuxièmeD  sidebar du footer.'),
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget' => '</div>',
 			'before_title' => '<h3 class="widget-title">',
