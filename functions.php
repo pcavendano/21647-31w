@@ -50,7 +50,7 @@ add_action( 'after_setup_theme', 'underscore_setup' );
 function underscore_scripts() {
 	/*
 	wp_enqueue_style( 'underscore-style',
-					   get_stylesheet_uri(), 
+					   get_stylesheet_uri(),
 					   array(),
 					_S_VERSION );
 	*/
@@ -59,6 +59,11 @@ function underscore_scripts() {
 		get_template_directory_uri() . '/style.css',
 		array(),
 		filemtime(get_template_directory() . '/style.css'), false);
+	/*
+						 wp_enqueue_style( 'google-fonts',
+						  'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap',
+						   false );
+	*/
 
 }
 add_action( 'wp_enqueue_scripts', 'underscore_scripts' );
