@@ -4,5 +4,59 @@
 }
 .site__footer div{
   flex: 1;
-  border: 1px solid #ee2626;
+  background-color: $brand__color--primary;
+  color: $brand__color--white;
+}
+.site__footer li{
+  list-style-type: none;
+  color: $brand__color--white;
+  padding-bottom: .5rem;
+}
+
+.site__footer a {
+  color:$brand__color--white;
+  cursor: pointer;
+
+  &:visited {
+    color: $brand__color--secondary;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $brand__color--primary;
+  }
+
+  &:focus {
+    outline: thin dotted;
+  }
+
+  &:hover,
+  &:active {
+    outline: 0;
+  }
+}
+
+.menu{
+  margin-left: 0;
+  padding-left: 0;
+}
+.menu-utiles-container ul{
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.sidebar{
+  padding-top: 1rem;
+  margin-left: 1rem;
+}
+
+#sidebar-footer-3{
+  padding-left: 1rem;
+}
+.wp-block-calendar table caption{
+  color: white !important;
+}
+.sidebar__footer--2 table * + *{
+  color: white;
 }
