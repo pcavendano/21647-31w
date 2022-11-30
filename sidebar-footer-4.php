@@ -1,3 +1,3 @@
-<div id="sidebar-footer-3" class="sidebar">
-	<?php dynamic_sidebar( 'footer-3' ); ?>
+<div id="sidebar-footer-4" class="sidebar">
+	<?php dynamic_sidebar( 'footer-4' ); ?>
 </div>
