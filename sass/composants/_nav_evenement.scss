@@ -5,45 +5,52 @@
   // ul
   list-style-type: none;
   display: flex;
-  justify-content: space-around;
-
-  border: 1px solid #bbb;
+  justify-content: space-between;
+  padding-left: 0;
+  border: 3px solid $brand__color--white;
+  margin-left: 0;
 }
 
 .menu__evenement .menu-item {
-  width: 25%;
+  width: 27%;
+
 }
 
 .menu__evenement .menu-item a {
   text-decoration: none;
+  color: $brand__color--text;
 }
 .menu__evenement .menu-item a:hover {
+
+}
+.menu__evenement .menu-item a:visited {
+  color: $brand__color--primary;
 }
 
 .menu-item:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  //background-color: rgba(0, 0, 0, 0.1);
 }
-.evenement__porte {
-  background-color: aquamarine;
-}
-.evenement__projet {
-  background-color: rgb(127, 153, 255);
-}
-.evenement__stage {
-  background-color: rgb(255, 255, 127);
+.evenement__porte,.evenement__projet,.evenement__stage {
+  background-color:$brand__color--secondary;
+  padding: 1rem;
 }
 
 .menu__item__icone {
-  width: 50px;
-  height: 50px;
+  margin-top: 1rem;
+  width: 150px;
+  height: 150px;
   border: 1px solid #aaa;
+  background-image: url("../../uploads/2022/11/icon-maisonneuve-150x150.jpg");
 }
 
 .evenement__porte .menu__item__icone {
-}
-
-.evenement__projet .menu__item__icone {
+  background-image: url("../../uploads/2022/11/BandeauGeneriqueFutur1-940x245-1-e1669781600481-150x150.jpg");
 }
 
 .evenement__stage .menu__item__icone {
+  background-image: url("../../uploads/2022/11/projets-e1669781855930-150x150.jpg");
+}
+
+.evenement__projet .menu__item__icone {
+  background-image: url("../../uploads/2022/11/stage-150x150.jpeg");
 }
