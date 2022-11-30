@@ -29,4 +29,4 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 
 ## Contributing
 
-1. Adresse du projet projet (http://165.22.230.174/)
+1. Adresse du projet projet (http://165.22.230.174/ 

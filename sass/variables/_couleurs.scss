@@ -8,7 +8,7 @@ $brand__color--primary: #043c7c;
 $brand__color--secondary:#3b9bcc;
 $brand__color--terciary: #9bd3db;
 $brand__color--text: rgb(36, 38, 40);
-$brand__color--white: rgb(213, 222, 231);
+$brand__color--white: rgb(243, 244, 246);
 
 $couleur__background--body:$brand__color--white;
 $couleur__background--navigation: $brand__color--primary;
@@ -27,8 +27,8 @@ $couleur__code: $brand__color--text;
 
 /* --------------------- Couleurs des liens */
 $couleur__link: #ffffff;
-$couleur__link--visited: #009EFF;
-$couleur__link--hover: #8ba9ff;
+$couleur__link--visited: $brand__color--white;
+$couleur__link--hover: $brand__color--text;
 
 $couleur__link__aside: $brand__color--secondary;
 $couleur__link__aside--visited:  $brand__color--secondary;
