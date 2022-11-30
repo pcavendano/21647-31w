@@ -4,8 +4,15 @@ $couleur__background--h1: rgba(81, 108, 190, 0.971);
 $couleur__background--h2h3h4: rgb(16, 12, 114);
 $couleur__background--code: #bbb;
 */
+$brand__color--primary: #043c7c;
+$brand__color--secondary:#3b9bcc;
+$brand__color--terciary: #9bd3db;
+$brand__color--text: rgb(36, 38, 40);
+$brand__color--white: rgb(213, 222, 231);
 
-$couleur__background--body: rgb(210, 208, 198);
+$couleur__background--body:$brand__color--white;
+$couleur__background--navigation: $brand__color--primary;
+$couleur__background--navigation-aside: $brand__color--primary;
 /* ----------------------------------- Couleur d'arrière plan titres */
 $couleur__background--h1: rgba(233, 237, 248, 0.971);
 $couleur__background--h2h3h4: rgb(215, 215, 231);
@@ -13,18 +20,18 @@ $couleur__background--h5h6: rgb(154, 153, 172);
 $couleur__background--code: rgb(213, 208, 230);
 
 /* --------------------------------------- couleur   color :  */
-$couleur__h1: rgba(25, 41, 88, 0.971);
-$couleur__h2h3h4: rgb(16, 12, 114);
-$couleur__h5h6: rgb(16, 12, 114);
-$couleur__code: rgb(14, 13, 17);
+$couleur__h1: $brand__color--text;
+$couleur__h2h3h4: $brand__color--text;
+$couleur__h5h6: $brand__color--text;
+$couleur__code: $brand__color--text;
 
 /* --------------------- Couleurs des liens */
-$couleur__link: #55f;
-$couleur__link--visited: #33adff;
-$couleur__link--hover: #212d4f;
+$couleur__link: #ffffff;
+$couleur__link--visited: #009EFF;
+$couleur__link--hover: #8ba9ff;
 
-$couleur__link__aside: rgb(14,27,45);
-$couleur__link__aside--visited: rgb(12,63,76);
+$couleur__link__aside: $brand__color--secondary;
+$couleur__link__aside--visited:  $brand__color--secondary;
 $couleur__link__aside--hover: rgb(76,122,165);
 /* ----------------------------- couleur bouton */
 $color__border-button: #999;
