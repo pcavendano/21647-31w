@@ -22,19 +22,19 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------//
 Importation des variables.
  */
-@import "variables/_couleurs";
-@import "variables/_structure";
-@import "variables/_polices";
+@import "variables/couleurs";
+@import "variables/structure";
+@import "variables/polices";
 
 // normalize et box-sizing
-@import "generic/_normalize";
-@import "generic/_box-sizing";
+@import "generic/normalize";
+@import "generic/box-sizing";
 
 // les éléments de base
-@import "base/_body";
-@import "base/_heading";
-@import "base/_simple";
-@import "base/_link";
+@import "base/body";
+@import "base/heading";
+@import "base/simple";
+@import "base/link";
 @import "base/_buttons";
 @import "base/_fields";
 @import "base/_hr";
@@ -42,11 +42,12 @@ Importation des variables.
 @import "base/_media";
 
 // Les composants
-@import "composants/_nav_principal";
+@import "composants/nav_principal";
 @import "composants/nav_aside";
-@import "composants/_nav_evenement";
-@import "composants/_entete";
-@import "composants/_footer";
+@import "composants/nav_evenement";
+@import "composants/entete";
+@import "composants/footer";
+@import "composants/main";
 @import "composants/liste_cours";
 // Layout
-@import "layouts/_sidebar-content";
+@import "layouts/sidebar-content";
