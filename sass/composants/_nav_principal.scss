@@ -1,6 +1,6 @@
 // nav
 .menu__principal {
-    background-color: #000;
+    background-color: $couleur__background--navigation;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,18 +19,18 @@
 a {
     display: block;
     text-decoration: none;
-    background-color: #000;
-    color: #fff;
+    color: $couleur__link;
     padding: 10px;
 }
 a:hover {
-    background-color: #555;
+    background-color: $couleur__link--hover;
 }
 } // fin .menu__principal
 
          /* transformation en CSS */
-     .menu-primaire-container {
-     }
+.menu-primaire-container {
+
+}
 .menu-primaire-container .menu {
 }
 .menu-primaire-container .menu-item {
