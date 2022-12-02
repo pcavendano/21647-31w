@@ -31,6 +31,9 @@
             "container_class"=> "menu__principal")); ?>
 		<div class="site__branding">
 			<?= get_custom_logo(); ?>
+            <h1 class="site__title">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+            </h1>
             <?php
 			$wp1_description = get_bloginfo( 'description', 'display' );
 			if ( $wp1_description || is_customize_preview() ) :

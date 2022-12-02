@@ -720,7 +720,7 @@ figure {
 .menu__item__icone {
   margin-top: 1rem;
   max-width: 150px;
-  height: auto;
+  height: 150px;
   border: 1px solid #aaa;
   background-image: url("../../uploads/2022/11/icon-maisonneuve-150x150.jpg");
 }
@@ -739,6 +739,25 @@ figure {
 
 .site__title {
   font-size: clamp(2rem, 4vw, 5rem);
+}
+
+.site__branding {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  padding-right: 3rem;
+}
+
+.site__branding img {
+  display: inline;
+  margin: 0;
+  max-width: 150px;
+}
+
+.site__description h1 {
+  width: 100%;
+  margin: 0 auto;
+  text-decoration: none;
 }
 
 .site__footer {
