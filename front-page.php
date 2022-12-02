@@ -16,6 +16,11 @@
 <?php get_header(); ?>
 
 <main class="site__main">
+    <style>
+        .site {
+            background-color:<?= get_theme_mod("site__body__background"); ?>;
+        }
+    </style>
 	<?php
 	wp_nav_menu(array(
 		"menu"=>"evenement",
@@ -24,10 +29,12 @@
 	));?>
 
     <section class="liste">
+
 		<?php	if ( have_posts() ) :
 			while ( have_posts() ) :
 				the_post(); ?>
                 <article class="liste__cours">
+
                     <a href="<?php the_permalink(); ?>"><h1>
 							<?php the_title(); ?></h1>
 

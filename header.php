@@ -18,6 +18,12 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+
+    <style>
+        .site__header {
+            background-color:<?= get_theme_mod("site__title__background"); ?>;
+        }
+    </style>
 </head>
 
 <body <?php body_class(); ?>>
@@ -58,5 +64,6 @@
     </aside><div><?php get_sidebar( 'aside-1' ); ?></div>
     <aside class="site__sidebar">
 
-        <div><?php get_sidebar( 'aside-2' ); ?></div>
+        <div><?php get_sidebar( 'aside-2' ); ?>
+        </div>
     </aside>

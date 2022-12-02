@@ -11,8 +11,8 @@ if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
 }
-
-//////////////////////////////////////////////////
+/*  Inclusion du customizer pour le background-color du header */
+require_once("options/apparence.php");
 function underscore_setup() {
 
 	/*

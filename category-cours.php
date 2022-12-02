@@ -17,11 +17,13 @@
 
 <main class="site__main">
     <section class="liste">
+
 		<?php
 		if ( have_posts() ) :
 		while ( have_posts() ) :
 		the_post(); ?>
         <article class="liste__cours">
+
             <h1><a href="<?php the_permalink(); ?>">
 					<?php the_title(); ?></a></h1>
             <h2>Durée du cours: <?php the_field('duree'); ?></h2>
