@@ -37,8 +37,8 @@
 
 .menu__item__icone {
   margin-top: 1rem;
-  width: 150px;
-  height: 150px;
+  max-width: 150px;
+  height: auto;
   border: 1px solid #aaa;
   background-image: url("../../uploads/2022/11/icon-maisonneuve-150x150.jpg");
 }

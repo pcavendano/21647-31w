@@ -52,8 +52,8 @@
 			'after'                => '</div>',
 		));
 		?>
-    </aside>
+    </aside><div><?php get_sidebar( 'aside-1' ); ?></div>
     <aside class="site__sidebar">
-        <div><?php get_sidebar( 'aside-1' ); ?></div>
+
         <div><?php get_sidebar( 'aside-2' ); ?></div>
     </aside>
