@@ -31,12 +31,13 @@
   top: 70px;
   transform: translateX(-100vw);
   transition: transform 0.5s;
-  background-color: #000;
+  background-color: $couleur__background--navigation-aside;
   @media screen and (min-width: 700px) {
     position: static;
     transform: translateX(0);
     /* important de revenir à width 100%  pour remplacer le 100vw*/
-    width: 100%;
+    width: 65%;
+    padding: 1rem;
   }
 
   .menu {
@@ -46,15 +47,28 @@
   }
 
   .menu-item {
+    padding-top: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    width: 100%;
   }
 
   a {
+
     text-decoration: none;
     padding: 5px 3px;
+    display: inline-block;
+    width: 100%;
   }
 }
+.menu__aside{
+  padding:0;
+}
+
+.menu__aside a:visited{
+  color: white;
+}
 /*
-.menu__aside{}
+
 .menu__aside .menu {}
 .menu__aside .menu-item {}
 .menu__aside a {}

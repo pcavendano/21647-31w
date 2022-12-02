@@ -11,8 +11,8 @@ if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
 }
-
-//////////////////////////////////////////////////
+/*  Inclusion du customizer pour le background-color du header */
+require_once("options/apparence.php");
 function underscore_setup() {
 
 	/*
@@ -23,6 +23,12 @@ function underscore_setup() {
 	*/
 	add_theme_support( 'title-tag' );
 
+	add_theme_support( 'custom-logo', array(
+		'height' => 150,
+		'width'  => 150,
+	) );
+
+	add_theme_support( 'post-thumbnails' );
 
 	/*
 		* Switch default core markup for search form, comment form, and comments
@@ -111,6 +117,22 @@ function igc31w_filtre_choix_menu($obj_menu, $arg){
 add_filter("wp_nav_menu_objects","igc31w_filtre_choix_menu", 10,2);
 
 
+/* ----------------------------------------------------------- Ajout de la description dans menu */
+/** filtre du menu evenement
+ * @arg  string $item_output  string représentant l'élément du menu
+ * @arg obj $item    element du menu
+ */
+function prefix_nav_description( $item_output, $item) {
+	if ( !empty( $item->description ) ) {
+		$item_output = str_replace( '</a>',
+			'<hr><span class="menu-item-description">' . $item->description . '</span><div class="menu__item__icone"></div></a>',
+			$item_output );
+	}
+	return $item_output;
+}
+add_filter( 'walker_nav_menu_start_el', 'prefix_nav_description', 10, 2 );
+// l'argument 10 : niveau de privilège
+// l'argument 2 : le nombre d'argument dans la fonction de rappel: «prefix_nav_description»
 
 /* -------------------------------------------------------- Initialisation des sidebar */
 
@@ -190,5 +212,22 @@ function my_register_sidebars() {
 			'after_title'   => '</h3>',
 		)
 	);
+
+
 	/* Repeat register_sidebar() code for additional sidebars. */
 }
+
+/**
+ *
+ *	La fonction permettra de modifier la requête principale de wordpress « main query »
+ *	Les artcle qui s'afficheront dans la page d'accueil seront les article de catégorie « accueil »
+ *
+ */
+function igc_31w_filtre_requete( $query ) {
+	if ( $query->is_home()
+		&& $query->is_main_query()
+		&& ! is_admin() ) {
+		$query->set( 'category_name', 'accueil' );
+	}
+}
+add_action( 'pre_get_posts', 'igc_31w_filtre_requete' );

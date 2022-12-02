@@ -16,15 +16,38 @@
 <?php get_header(); ?>
 
 <main class="site__main">
+    <style>
+        .site {
+            background-color:<?= get_theme_mod("site__body__background"); ?>;
+        }
+    </style>
 	<?php
-	if ( have_posts() ) :
-		while ( have_posts() ) :
-			the_post(); ?>
-            <h1><a href="<?php the_permalink(); ?>">
-					<?php the_title(); ?></a></h1>
-			<?php the_content(null, true); ?>
-		<?php endwhile; ?>
-	<?php endif; ?>
+	wp_nav_menu(array(
+		"menu"=>"evenement",
+		"container"=>"nav",
+		"container_class"=>"menu__evenement"
+	));?>
+
+    <section class="liste">
+
+		<?php	if ( have_posts() ) :
+			while ( have_posts() ) :
+				the_post(); ?>
+                <article class="liste__cours">
+
+                    <a href="<?php the_permalink(); ?>"><h1>
+							<?php the_title(); ?></h1>
+
+					<?php
+					if ( has_post_thumbnail() ) {
+						the_post_thumbnail('thumbnail');
+					}
+					?>
+					<?= wp_trim_words(get_the_excerpt(),10," ... "); ?>
+                    </a></article>
+			<?php endwhile; ?>
+		<?php endif; ?>
+    </section>
 </main>
 <?php get_footer(); ?>
 </html>

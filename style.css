@@ -358,7 +358,7 @@ html {
 }
 
 body {
-  background-color: rgb(210, 208, 198);
+  background-color: rgb(243, 244, 246);
 }
 
 main {
@@ -422,13 +422,14 @@ big {
 }
 
 a {
-  color: #55f;
+  color: rgb(36, 38, 40);
+  cursor: pointer;
 }
 a:visited {
-  color: #33adff;
+  color: #3b9bcc;
 }
 a:hover, a:focus, a:active {
-  color: #212d4f;
+  color: #043c7c;
 }
 a:focus {
   outline: thin dotted;
@@ -438,14 +439,19 @@ a:hover, a:active {
 }
 
 /* ------------------------------------------------  .menu__aside  */
+.menu__aside li {
+  padding-bottom: 1rem;
+}
+
 .menu__aside a {
-  color: rgb(14, 27, 45);
+  color: rgb(243, 244, 246);
+  padding-bottom: 1rem;
 }
 .menu__aside a:visited {
-  color: rgb(12, 63, 76);
+  color: rgb(243, 244, 246);
 }
 .menu__aside a:hover, .menu__aside a:focus, .menu__aside a:active {
-  color: rgb(76, 122, 165);
+  color: rgb(243, 244, 246);
 }
 .menu__aside a:focus {
   outline: thin dotted;
@@ -583,7 +589,7 @@ figure {
 }
 
 .menu__principal {
-  background-color: #000;
+  background-color: #043c7c;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -599,29 +605,166 @@ figure {
 .menu__principal a {
   display: block;
   text-decoration: none;
-  background-color: #000;
-  color: #fff;
+  color: #ffffff;
   padding: 10px;
 }
 .menu__principal a:hover {
-  background-color: #555;
+  background-color: rgb(36, 38, 40);
 }
 
 /* transformation en CSS */
+.site__menu {
+  position: relative;
+}
+
+.chk-burger {
+  display: none;
+}
+
+.chk-burger:checked ~ .burger {
+  transform: rotate(90deg);
+}
+
+.chk-burger:checked ~ .menu__aside {
+  transform: translateX(0);
+}
+
+.burger {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  top: 10px;
+  left: 10px;
+  transform: rotate(0deg);
+  transition: transform 0.5s;
+  font-size: 2rem;
+  color: #fff;
+}
+
 .menu__aside {
   display: flex;
+  position: absolute;
+  width: 100vw;
+  top: 70px;
+  transform: translateX(-100vw);
+  transition: transform 0.5s;
+  background-color: #043c7c;
+}
+@media screen and (min-width: 700px) {
+  .menu__aside {
+    position: static;
+    transform: translateX(0);
+    /* important de revenir à width 100%  pour remplacer le 100vw*/
+    width: 65%;
+    padding: 1rem;
+  }
 }
 .menu__aside .menu {
-  list-style: none;
+  list-style-type: none;
+  padding: 0;
   margin: 0;
+}
+.menu__aside .menu-item {
+  padding-top: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  width: 100%;
+}
+.menu__aside a {
+  text-decoration: none;
+  padding: 5px 3px;
+  display: inline-block;
+  width: 100%;
+}
+
+.menu__aside {
   padding: 0;
 }
+
+.menu__aside a:visited {
+  color: white;
+}
+
 /*
-.menu_aside{}
-.menu_aside .menu {}
-.menu_aside .menu-item {}
+
+.menu__aside .menu {}
+.menu__aside .menu-item {}
 .menu__aside a {}
 */
+.menu__evenement .menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0;
+  border: 3px solid rgb(243, 244, 246);
+  margin-left: 0;
+}
+
+.menu__evenement .menu-item {
+  width: 27%;
+}
+
+.menu__evenement .menu-item a {
+  text-decoration: none;
+  color: rgb(36, 38, 40);
+}
+
+.menu__evenement .menu-item a:visited {
+  color: #043c7c;
+}
+
+.evenement__porte, .evenement__projet, .evenement__stage {
+  background-color: #3b9bcc;
+  padding: 1rem;
+}
+
+.menu__item__icone {
+  margin-top: 1rem;
+  max-width: 150px;
+  height: 150px;
+  border: 1px solid #aaa;
+  background-image: url("../../uploads/2022/11/icon-maisonneuve-150x150.jpg");
+}
+
+.evenement__porte .menu__item__icone {
+  background-image: url("../../uploads/2022/11/BandeauGeneriqueFutur1-940x245-1-e1669781600481-150x150.jpg");
+}
+
+.evenement__stage .menu__item__icone {
+  background-image: url("../../uploads/2022/11/projets-e1669781855930-150x150.jpg");
+}
+
+.evenement__projet .menu__item__icone {
+  background-image: url("../../uploads/2022/11/stage-150x150.jpeg");
+}
+
+.site__title {
+  font-size: clamp(2rem, 4vw, 5rem);
+}
+
+.site__branding {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  padding-right: 3rem;
+}
+
+.site__branding img {
+  display: inline;
+  margin: 0;
+  max-width: 150px;
+}
+
+.site__description h1 {
+  width: 100%;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+.site__title a {
+  text-decoration: none;
+  color: rgb(243, 244, 246);
+}
+
 .site__footer {
   display: flex;
   justify-content: space-around;
@@ -629,7 +772,78 @@ figure {
 
 .site__footer div {
   flex: 1;
-  border: 1px solid #ee2626;
+  background-color: #043c7c;
+  color: rgb(243, 244, 246);
+}
+
+.site__footer li {
+  list-style-type: none;
+  color: rgb(243, 244, 246);
+  padding-bottom: 0.5rem;
+}
+
+.site__footer a {
+  color: rgb(243, 244, 246);
+  cursor: pointer;
+}
+.site__footer a:visited {
+  color: #3b9bcc;
+}
+.site__footer a:hover, .site__footer a:focus, .site__footer a:active {
+  color: #043c7c;
+}
+.site__footer a:focus {
+  outline: thin dotted;
+}
+.site__footer a:hover, .site__footer a:active {
+  outline: 0;
+}
+
+.menu {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.menu-utiles-container ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.sidebar {
+  padding-top: 1rem;
+  margin-left: 1rem;
+}
+
+#sidebar-footer-3 {
+  padding-left: 1rem;
+}
+
+.wp-block-calendar table caption {
+  color: white !important;
+}
+
+.sidebar__footer--2 table * + * {
+  color: white;
+}
+
+main {
+  margin-right: 2rem;
+}
+
+.liste {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
+}
+
+.liste__cours {
+  flex: 0 1 20%;
+  margin-bottom: 0.1rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
 }
 
 .site__header {
@@ -641,7 +855,11 @@ figure {
   overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
 }
 
-.widget__area {
+.site__menu {
+  grid-area: menu;
+}
+
+.site__sidebar {
   grid-area: sidebar;
 }
 
@@ -652,12 +870,12 @@ figure {
 .site {
   display: grid;
   grid-template-columns: auto;
-  grid-template-areas: "sidebar" "header" "main" "footer";
+  grid-template-areas: "menu" "header" "main" "footer";
 }
 @media screen and (min-width: 700px) {
   .site {
     grid-template-columns: 25% auto;
-    grid-template-areas: "header header" "sidebar main" "footer footer";
+    grid-template-areas: "header header" "menu main" "sidebar main" ". main" "footer footer";
   }
 }
 

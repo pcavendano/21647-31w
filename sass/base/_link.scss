@@ -1,14 +1,15 @@
 a {
-  color: $couleur__link;
+  color: $brand__color--text;
+  cursor: pointer;
 
   &:visited {
-    color: $couleur__link--visited;
+    color: $brand__color--secondary;
   }
 
   &:hover,
   &:focus,
   &:active {
-    color: $couleur__link--hover;
+    color: $brand__color--primary;
   }
 
   &:focus {
@@ -21,17 +22,21 @@ a {
   }
 }
 /* ------------------------------------------------  .menu__aside  */
-.menu__aside a {
-  color: $couleur__link__aside;
+.menu__aside li{
+  padding-bottom: 1rem;
+}
+  .menu__aside a {
+  color: $brand__color--white;
+  padding-bottom: 1rem;
 
   &:visited {
-    color: $couleur__link__aside--visited;
+    color: $brand__color--white;
   }
 
   &:hover,
   &:focus,
   &:active {
-    color: $couleur__link__aside--hover;
+    color: $brand__color--white;
   }
 
   &:focus {

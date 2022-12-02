@@ -32,9 +32,6 @@
             </section>
 		<?php
 
-
-
-
 		endwhile;
 	endif;
 	?>
