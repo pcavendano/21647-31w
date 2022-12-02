@@ -36,7 +36,7 @@
     position: static;
     transform: translateX(0);
     /* important de revenir à width 100%  pour remplacer le 100vw*/
-    width: 50%;
+    width: 80%;
     padding: 1rem;
   }
 
@@ -47,6 +47,7 @@
   }
 
   .menu-item {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   }
 
   a {

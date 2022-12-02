@@ -28,8 +28,8 @@
 			while ( have_posts() ) :
 				the_post(); ?>
                 <article class="liste__cours">
-                    <h1><a href="<?php the_permalink(); ?>">
-							<?php the_title(); ?></a></h1>
+                    <a href="<?php the_permalink(); ?>"><h1>
+							<?php the_title(); ?></h1>
 
 					<?php
 					if ( has_post_thumbnail() ) {
@@ -37,7 +37,7 @@
 					}
 					?>
 					<?= wp_trim_words(get_the_excerpt(),10," ... "); ?>
-                </article>
+                    </a></article>
 			<?php endwhile; ?>
 		<?php endif; ?>
     </section>

@@ -655,7 +655,7 @@ figure {
     position: static;
     transform: translateX(0);
     /* important de revenir à width 100%  pour remplacer le 100vw*/
-    width: 50%;
+    width: 80%;
     padding: 1rem;
   }
 }
@@ -663,6 +663,9 @@ figure {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+.menu__aside .menu-item {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .menu__aside a {
   text-decoration: none;
@@ -802,8 +805,9 @@ main {
 .liste__cours {
   flex: 0 1 20%;
   margin-bottom: 0.1rem;
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   padding-left: 1rem;
+  padding-bottom: 1rem;
 }
 
 .site__header {
